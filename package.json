@@ -5,10 +5,10 @@
   "main": "server/app/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"cd server && npm start",
+    "start": "cd server && npm start",
     "server": "start cmd /k \"cd server &&  npm run dev\" ",
     "client": "start cmd /k \"cd client &&  npm start\" ",
-    "dev":"npm run client & npm run server"
+    "dev": "npm run client & npm run server"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/henbarlevi/hen-portfolio-v2.0/issues"
   },
-  "homepage": "https://github.com/henbarlevi/hen-portfolio-v2.0#readme"
+  "homepage": "https://github.com/henbarlevi/hen-portfolio-v2.0#readme",
+  "dependencies": {}
 }
