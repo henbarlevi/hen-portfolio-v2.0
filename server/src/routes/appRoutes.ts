@@ -18,7 +18,7 @@ router.get('/cv', (req, res) => {
     console.log('download cv');
     res.setHeader('Content-disposition', `attachment; filename=Hen_Fullstack_CV.pdf`);//set the downoaded file name
     res.setHeader('Content-Type', 'application/octet-stream');//prevent user from living the app page
-    res.sendFile(path.join(__dirname, '../../../Hen_CV.pdf'));
+    res.sendFile(path.join(__dirname, '../../Hen_CV.pdf'));
 });
 
 
