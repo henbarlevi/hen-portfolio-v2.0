@@ -6,3 +6,27 @@
 
 input.ng-dirty.ng-invalid { border: solid red 2px; }
 input.ng-dirty.ng-valid { border: solid green 2px; }
+
+
+
+@keyframes spin {
+    from {transform:rotateY(0deg);}
+    to {transform:rotateY(360deg);}
+}
+
+
+.spin{
+    &:hover{
+        animation-name:spin;
+        animation-iteration-count: infinite;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+    }
+}
+
+.speedSpin{
+    &:hover{
+        animation-duration: .7s;
+        animation-iteration-count: 10;
+    }
+}

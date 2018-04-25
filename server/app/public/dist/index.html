@@ -10,10 +10,32 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <title>Hen - Web Developer</title>
-
+  <style> 
+  /*for loading animation*/
+  /* Standard syntax */
+  @keyframes fade-in-out {
+      0%   {opacity:0}
+      50%  {opacity:1}
+      100% {opacity:0}
+  }
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes fade-in-out {
+      0%   {opacity:0}
+      50%  {opacity:1}
+      100% {opacity:0}
+  }
+  .loading-app{
+    display: flex; justify-content:center; align-items: center; height: 100vh;
+    -webkit-animation-name: fade-in-out ; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: fade-in-out ;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  </style>
   <!-- Bootstrap Core CSS -->
   <!-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
-
   <!-- Theme CSS -->
   <!-- <link href="assets/css/freelancer.min.css" rel="stylesheet"> -->
 
@@ -30,7 +52,9 @@
   <![endif]-->
 </head>
 <body id="page-top" class="index">
-  <app-root></app-root>
+  <app-root>
+    <div class="loading-app" ><p style="font-size: 100px; color:#813772">Loading...</p></div>
+  </app-root>
 
    <!-- jQuery -->
    <script src="assets/vendor/jquery/jquery.min.js"></script>

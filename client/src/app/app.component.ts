@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2, ElementRef, ViewChild } from '@angular/core';
 import { PortfolioService } from './portfolio.service';
 import { iMessage } from './message.model';
 import { HttpResponse } from '@angular/common/http';
@@ -9,16 +9,17 @@ import { HttpResponse } from '@angular/common/http';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  speedSpin: boolean = false;
   sendingEmail: boolean = false;
   sendingEmailFailed: boolean | null = null;
   message: iMessage | any = {};
-  constructor(private portfolioService: PortfolioService) { }
+  constructor(private portfolioService: PortfolioService, private renderer: Renderer2) { }
+  /**Download Cv */
   downloadMyCv() {
     console.log('downloading cv');
     this.portfolioService.downloadCv();
   }
-
+  /**END EMAIL */
   onSubmit() {
     this.sendingEmailFailed = null;
     this.sendingEmail = true;
@@ -32,8 +33,13 @@ export class AppComponent {
         console.log('failed ' + JSON.stringify(e));
       })
       .then(() => this.sendingEmail = false);
+  }
 
-
-
+  changeSpinSpeed(){
+    this.speedSpin = true;
+    setTimeout(() => {
+    this.speedSpin = false;
+      
+    }, 2000);
   }
 }
