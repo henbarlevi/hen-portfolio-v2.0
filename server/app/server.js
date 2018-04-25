@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const http = require("http");
-const debug = require("debug");
+//import * as debug from 'debug';
 const App_1 = require("./App");
-debug('ts-express:server');
+//debug('ts-express:server');
 const port = normalizePort(process.env.PORT || 3000);
 App_1.default.set('port', port);
 const server = http.createServer(App_1.default);
@@ -40,6 +40,6 @@ function onListening() {
     let addr = server.address();
     let bind = (typeof addr === 'string') ? `pipe ${addr}` : `port ${addr.port}`;
     console.log('server is up on port  : ' + bind);
-    debug(`Listening on ${bind}`);
+    //debug(`Listening on ${bind}`);
 }
 //# sourceMappingURL=server.js.map

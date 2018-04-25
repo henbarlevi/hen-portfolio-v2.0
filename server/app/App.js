@@ -5,17 +5,15 @@ const express = require("express");
 //import * as logger from 'morgan';
 const bodyParser = require("body-parser");
 //import * as mongoose from 'mongoose';
-const config = require("config");
+//import * as config from 'config';
 const appRoutes_1 = require("./routes/appRoutes");
-//===== utils
-const Logger_1 = require("./utils/Logger");
 const TAG = 'App.ts';
-const ENV = process.env.NODE_ENV || 'local';
-const envConfig = config.get(`${ENV}`);
-const connectionString = envConfig.connectionString || 'mongodb://localhost/mydb';
-Logger_1.Logger.d(TAG, `============== ENV Configuration ==============`, 'yellow');
-console.log(envConfig);
-Logger_1.Logger.d(TAG, `============== / ENV Configuration ============`, 'yellow');
+// const ENV: string = process.env.NODE_ENV || 'local';
+// const envConfig: any = config.get(`${ENV}`);
+// const connectionString: string = envConfig.connectionString || 'mongodb://localhost/mydb';
+// Logger.d(TAG, `============== ENV Configuration ==============`, 'yellow');
+// console.log(envConfig);
+// Logger.d(TAG, `============== / ENV Configuration ============`, 'yellow');
 // Creates and configures an ExpressJS web server.
 class App {
     //Run configuration methods on the Express instance.
