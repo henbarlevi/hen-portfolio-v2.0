@@ -1,1 +1,1 @@
-web: node ./server/app/server.js
+web: cd server && npm i && node ./app/server.js
