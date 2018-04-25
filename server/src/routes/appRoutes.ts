@@ -1,6 +1,7 @@
 import * as express from 'express';
 import * as fs from 'fs';
-import * as Rx from 'rxjs';
+//import * as Rx from 'rxjs';
+import * as path from 'path';
 const router :express.Router = express.Router();
 
 
@@ -10,7 +11,10 @@ router.get('/',(req: express.Request, res: express.Response) => {
     res.send('welcome to server api');
 })
 
-
+router.get('/cv', (req, res) => {
+    console.log('download cv');
+    res.sendFile(path.join(__dirname, '../../Hen_CV.pdf'));
+});
 
 
 export default router  ;

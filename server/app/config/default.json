@@ -8,7 +8,7 @@
     "local":{
         "connectionString":"mongodb://localhost/myLocaldb",
         "baseUrl":"otherserverRoot"
-        
+        //
     }
     
 }

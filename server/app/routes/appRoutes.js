@@ -1,9 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
+//import * as Rx from 'rxjs';
+const path = require("path");
 const router = express.Router();
 router.get('/', (req, res) => {
     res.send('welcome to server api');
+});
+router.get('/cv', (req, res) => {
+    console.log('download cv');
+    res.sendFile(path.join(__dirname, '../../Hen_CV.pdf'));
 });
 exports.default = router;
 //-------------------------------------SNIPPETS-------------------------
