@@ -20,7 +20,7 @@ export class AppComponent {
     this.portfolioService.downloadCv();
   }
   /**END EMAIL */
-  onSubmit() {
+  onSubmit(form) {
     this.sendingEmailFailed = null;
     this.sendingEmail = true;
     this.portfolioService.sendEmail(this.message)
