@@ -29,7 +29,8 @@ class App {
         //   useMongoClient: true
         // }, (err) => { err ? Logger.d('MongoDB Connection :', `${err}`, 'red') : Logger.d(`MongoDB Connection :`, `SUCCESS`, 'green') })//print mongo connection status
         //this.express.use(logger('dev'));
-        this.express.use(cors());
+        this.express.disable('etag'); //in order to prevent 304 when user request the HEN_CV file
+        this.express.use(cors()); //enable CORS
         this.express.use(bodyParser.json());
         this.express.use(bodyParser.urlencoded({ extended: false }));
         this.express.use(express.static(path.join(__dirname, 'public/dist'))); // Point static path to dist

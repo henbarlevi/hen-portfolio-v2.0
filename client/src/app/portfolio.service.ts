@@ -2,14 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { saveAs } from 'file-saver/FileSaver';
 import { iMessage } from './message.model';
+import { environment } from '../environments/environment';
 
 @Injectable()
 export class PortfolioService {
-
+  
   constructor(private httpClient: HttpClient) { }
-
+  private baseUrl = environment.api; 
   sendEmail(message: iMessage):Promise<HttpResponse<Object>> {
-   return this.httpClient.post('api/email',message, {
+   return this.httpClient.post(`${this.baseUrl}/email`,message, {
       observe: 'response',//by default will extract the body only
     }).toPromise();
   }
@@ -18,7 +19,7 @@ export class PortfolioService {
 
   //@link http://amilspage.com/angular4-file-download/
   downloadCv() {
-    this.httpClient.get('api/cv', {
+    this.httpClient.get(`${this.baseUrl}/cv`, {
       observe: 'response',
       responseType: 'blob'
     }).subscribe((res: HttpResponse<Blob>) => {
