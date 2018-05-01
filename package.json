@@ -4,7 +4,7 @@
   "description": "hen portfolio site",
   "main": "server/app/server.js",
   "engines": {
-    "node":"8.9.4"
+    "node": "8.9.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,5 +23,6 @@
     "url": "https://github.com/henbarlevi/hen-portfolio-v2.0/issues"
   },
   "homepage": "https://github.com/henbarlevi/hen-portfolio-v2.0#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {}
 }

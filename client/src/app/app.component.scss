@@ -1,9 +1,17 @@
+@import '~styles/main';/*The tilde (~) will tell Sass to look in the src/ folder and is a quick shortcut to importing Sass files.*/
+
+//HEN-IMG
 #hen-img{
     height: 160px;
     width: 256px;
     border-radius: 50%;
+    transition: all 400ms;
+    &:hover{
+        box-shadow: $xl-shadow;
+    }
 }
 
+//FORM VALIDATION COLORS
 input.ng-dirty.ng-invalid { border: solid red 2px; }
 input.ng-dirty.ng-valid { border: solid green 2px; }
 

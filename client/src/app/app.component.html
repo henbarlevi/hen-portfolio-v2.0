@@ -34,7 +34,7 @@
 
 <!-- Header -->
 <header>
-    <div class="container">
+    <div class="container" ngsReveal >
         <div class="row">
             <div class="col-lg-12">
                 <img #henImg class="img-responsive spin" (click)="changeSpinSpeed()" [ngClass] ="{speedSpin:speedSpin}" id="hen-img" src="assets/img/hen.jpg" alt="">
@@ -49,7 +49,7 @@
 </header>
 
 <!-- Portfolio Grid Section -->
-<section id="portfolio">
+<section id="portfolio" ngsReveal>
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -123,7 +123,7 @@
 </section>
 
 <!-- About Section -->
-<section class="success" id="about">
+<section class="success" id="about" ngsReveal>
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -142,7 +142,7 @@
                     <br>I Created This Website with Nodejs Express and Angular 5 only to show a small scale of my capabilities</p>
             </div>
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <a href="#" class="btn btn-lg btn-outline" (click)="downloadMyCv()">
+                <a href="{{cvLink}}" class="btn btn-lg btn-outline" >
                     <i class="fa fa-download"></i> Download My CV
                 </a>
             </div>
@@ -151,7 +151,7 @@
 </section>
 
 <!-- Contact Section -->
-<section id="contact">
+<section id="contact" ngsReveal>
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -218,7 +218,7 @@
 </section>
 
 <!-- Footer -->
-<footer class="text-center">
+<footer class="text-center" ngsReveal>
     <div class="footer-above">
         <div class="container">
             <div class="row">

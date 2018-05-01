@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PortfolioService } from './portfolio.service';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
+import {NgsRevealModule} from 'ng-scrollreveal';
 @NgModule({
   //components
   declarations: [
@@ -14,7 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgsRevealModule.forRoot()
   ],
   //services
   providers: [PortfolioService],
