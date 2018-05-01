@@ -6,6 +6,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 //import * as mongoose from 'mongoose';
 //import * as config from 'config';
+const cors = require("cors");
 const appRoutes_1 = require("./routes/appRoutes");
 const TAG = 'App.ts';
 // const ENV: string = process.env.NODE_ENV || 'local';
@@ -28,6 +29,7 @@ class App {
         //   useMongoClient: true
         // }, (err) => { err ? Logger.d('MongoDB Connection :', `${err}`, 'red') : Logger.d(`MongoDB Connection :`, `SUCCESS`, 'green') })//print mongo connection status
         //this.express.use(logger('dev'));
+        this.express.use(cors());
         this.express.use(bodyParser.json());
         this.express.use(bodyParser.urlencoded({ extended: false }));
         this.express.use(express.static(path.join(__dirname, 'public/dist'))); // Point static path to dist
