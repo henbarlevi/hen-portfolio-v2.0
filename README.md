@@ -1,3 +1,6 @@
+- Heroku - https://hen-portfolio.herokuapp.com
+- Firebase - https://hen-portfolio.firebaseapp.com
+
 > # Heroku Deployment
 * Prerequirement : 1. node 2. git 3. npm
 ### 1. create Project in the [heroku console](https://dashboard.heroku.com/apps)
